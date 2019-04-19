@@ -41,9 +41,9 @@ namespace GradeBook.UserInterfaces
             }
             var name = parts[1];
 			BaseGradeBook gradeBook = null;
-			if (parts[3].ToLower() == "standard")
+			if (parts[2].ToLower() == "standard")
 				gradeBook = new StandardGradeBook(name);
-			else if (parts[3].ToLower() == "ranked")
+			else if (parts[2].ToLower() == "ranked")
 				gradeBook = new RankedGradeBook(name);
 			else
 				Console.WriteLine(parts[3] + " isnot a supported type of gradebook, please try again");
