@@ -25,16 +25,17 @@ namespace GradeBook.GradeBooks
 				else
 					position++;
 			}
-			double rank = position / Students.Count;
-			if (rank > .8)
+			double rank = ((double) position) / ((double) Students.Count);
+			if (rank < 0.2)
 				return 'A';
-			else if (rank > .6)
+			else if (rank < 0.4)
 				return 'B';
-			else if (rank > .4)
+			else if (rank < 0.6)
 				return 'C';
-			else if (rank > .2)
+			else if (rank < 0.8)
 				return 'D';
-			return 'F';
+			else
+				return 'F';
 		}
 	}
 }
